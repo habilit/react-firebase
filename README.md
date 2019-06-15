@@ -1,2 +1,3 @@
 # react-firebase
-try react-firebase
+npm start
+
