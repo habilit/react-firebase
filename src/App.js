@@ -6,10 +6,12 @@ import Home from './containers/Home';
 import About from './containers/About';
 import logo from './logo.svg';
 import './App.css';
+import {fetchToDos} from "./actions/todoAction";
 
 class App extends Component {
     simpleAction = (event) => {
         this.props.simpleAction();
+        this.props.fetchToDos();
     }
 
     render = () => {
@@ -44,7 +46,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    simpleAction: () => dispatch(simpleAction())
+    simpleAction: () => dispatch(simpleAction()),
+    fetchToDos: () => dispatch(fetchToDos()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,6 +1,9 @@
-import {todosRef} from '../firebase'
+import {todosRef} from '../firebase';
 const FETCH_TODOS = 'FETCH_TODOS';
+
 export const addToDo = newToDo => async dispatch => {
+    console.log('newToDo');
+    console.log(newToDo);
     todosRef.push().set(newToDo);
 };
 export const completeToDo = completeToDo => async dispatch => {
