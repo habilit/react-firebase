@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { simpleAction } from '../actions/simpleAction';
 import {fetchToDos, addToDo} from "../actions/todoAction";
 
@@ -23,10 +24,7 @@ class MyList extends Component {
     };
 
    componentWillMount() {
-        // this.props.fetchTodos();
        this.props.fetchToDos();
-        console.log('this.props');
-        console.log(this.props);
     }
 
     renderForm = () => {
@@ -50,21 +48,19 @@ class MyList extends Component {
     };
 
     renderToDo() {
-        const {data} = this.props;
-        const toDos = _.map(data, (value, key) => {
-            return (<div>
-                <div>key : {key}</div>
-                <div>value : {value}</div>
-            </div>);
-
-        });
-        if (!_.isEmpty(toDos)) {
-            return toDos;
+        const { todos } = this.props;
+        if (_.isNil(todos)) {
+            return (
+                <div>
+                    <h4>You have no more things ToDo!</h4>
+                </div>
+            );
         }
         return (
-            <div>
-                <h4>You have no more things ToDo!</h4>
-            </div>
+            <BootstrapTable data={ todos }>
+                <TableHeaderColumn dataField='id' isKey>ID</TableHeaderColumn>
+                <TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
+            </BootstrapTable>
         );
     }
 
@@ -80,9 +76,22 @@ class MyList extends Component {
 
 }
 
-const mapStateToProps = state => ({
-    ...state
-});
+const mappedData = (data) => {
+    return _.map(data, (value, key) => {
+            return {
+                id: key,
+                title: value.title
+            }
+    })
+};
+
+const mapStateToProps = state => {
+    console.log('--state--');
+    console.log(state);
+    return {
+        todos: mappedData(state.todos),
+    };
+};
 
 const mapDispatchToProps = dispatch => ({
     simpleAction: () => dispatch(simpleAction()),
