@@ -1,0 +1,15 @@
+.loading {
+  margin: auto;
+  display: block;
+  width: fit-content;
+}
+
+.table {
+  width: 100%;
+}
+
+.column {
+  background-color: #eee;
+  height: 30px;
+  padding-left: 10px;
+}
