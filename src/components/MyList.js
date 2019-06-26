@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Loader from 'react-loader-spinner'
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { simpleAction } from '../actions/simpleAction';
 import {fetchToDos, addToDo} from "../actions/todoAction";
+
+import './index.css';
 
 class MyList extends Component {
     state = {
@@ -47,20 +50,25 @@ class MyList extends Component {
             );
     };
 
+    rowClassNameFormat = (row, rowIdx) => {
+        return rowIdx % 1 === 0 ? 'row-even' : 'row-odd';
+    };
+
     renderToDo() {
         const { todos } = this.props;
-        if (_.isNil(todos)) {
-            return (
-                <div>
-                    <h4>You have no more things ToDo!</h4>
-                </div>
-            );
-        }
         return (
-            <BootstrapTable data={ todos }>
-                <TableHeaderColumn dataField='id' isKey>ID</TableHeaderColumn>
-                <TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
-            </BootstrapTable>
+            <div className="todo-list">
+                {
+                    _.isNil(todos) ?
+                    <div className="loading">
+                        <Loader type="TailSpin" color="#00BFFF" height="30" width="30"/>
+                    </div>:
+                    <BootstrapTable className='table' data={ todos } trClassName={this.rowClassNameFormat} >
+                        <TableHeaderColumn dataField='id' className='column key-column' isKey>ID</TableHeaderColumn>
+                        <TableHeaderColumn dataField='title' className='column title-column'>Title</TableHeaderColumn>
+                    </BootstrapTable>
+                }
+            </div>
         );
     }
 

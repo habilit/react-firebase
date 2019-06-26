@@ -1,0 +1,9 @@
+.loading {
+  margin: auto;
+  display: block;
+  width: fit-content;
+}
+
+.table {
+  width: 100%;
+}
