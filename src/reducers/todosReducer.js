@@ -1,4 +1,10 @@
-const todos = (state = [], action) => {
+
+const defaultData = {
+    isFetching: false,
+    data: [],
+};
+
+const todos = (state = defaultData, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
@@ -10,9 +16,10 @@ const todos = (state = [], action) => {
                 }
             ]
         case 'IS_FETCHING_TODOS':
-            console.log('state in reducer IS_FETCHING_TODOS')
-            console.log(state)
-            //return state
+            return {
+                ...state,
+                isFetching: true,
+            };
         case 'TOGGLE_TODO':
             return state.map(todo =>
                 todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
@@ -20,7 +27,11 @@ const todos = (state = [], action) => {
         case 'FETCH_TODOS':
             console.log('state FETCH_TODOS');
             console.log(state);
-            return action.payload;
+            return {
+                ...state,
+                isFetching: false,
+                data: action.payload
+            };
         default:
             return state
     }

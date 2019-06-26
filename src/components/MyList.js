@@ -55,11 +55,11 @@ class MyList extends Component {
     };
 
     renderToDo() {
-        const { todos } = this.props;
+        const { todos, isFetching } = this.props;
         return (
             <div className="todo-list">
                 {
-                    _.isNil(todos) ?
+                    isFetching ?
                     <div className="loading">
                         <Loader type="TailSpin" color="#00BFFF" height="30" width="30"/>
                     </div>:
@@ -94,10 +94,9 @@ const mappedData = (data) => {
 };
 
 const mapStateToProps = state => {
-    console.log('--state--');
-    console.log(state);
     return {
-        todos: mappedData(state.todos),
+        todos: mappedData(state.todos.data),
+        isFetching: state.todos.isFetching,
     };
 };
 

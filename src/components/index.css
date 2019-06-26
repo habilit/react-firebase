@@ -7,3 +7,9 @@
 .table {
   width: 100%;
 }
+
+.column {
+  background-color: #eee;
+  height: 30px;
+  padding-left: 10px;
+}
