@@ -1,3 +1,0 @@
-# react-firebase
-npm start
-
