@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/habilit/react-firebase/static/css/main.2cce8147.chunk.css",
-    "main.js": "/habilit/react-firebase/static/js/main.5b58123e.chunk.js",
-    "main.js.map": "/habilit/react-firebase/static/js/main.5b58123e.chunk.js.map",
-    "runtime~main.js": "/habilit/react-firebase/static/js/runtime~main.ca2ba742.js",
-    "runtime~main.js.map": "/habilit/react-firebase/static/js/runtime~main.ca2ba742.js.map",
-    "static/js/2.762e967b.chunk.js": "/habilit/react-firebase/static/js/2.762e967b.chunk.js",
-    "static/js/2.762e967b.chunk.js.map": "/habilit/react-firebase/static/js/2.762e967b.chunk.js.map",
-    "index.html": "/habilit/react-firebase/index.html",
-    "precache-manifest.45826f4eda129ba0ac0cabcd6c13a430.js": "/habilit/react-firebase/precache-manifest.45826f4eda129ba0ac0cabcd6c13a430.js",
-    "service-worker.js": "/habilit/react-firebase/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/habilit/react-firebase/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/habilit/react-firebase/static/media/logo.5d5d9eef.svg"
+    "main.css": "/react-firebase/static/css/main.2cce8147.chunk.css",
+    "main.js": "/react-firebase/static/js/main.9a0c00b3.chunk.js",
+    "main.js.map": "/react-firebase/static/js/main.9a0c00b3.chunk.js.map",
+    "runtime~main.js": "/react-firebase/static/js/runtime~main.be50be41.js",
+    "runtime~main.js.map": "/react-firebase/static/js/runtime~main.be50be41.js.map",
+    "static/js/2.94680d8e.chunk.js": "/react-firebase/static/js/2.94680d8e.chunk.js",
+    "static/js/2.94680d8e.chunk.js.map": "/react-firebase/static/js/2.94680d8e.chunk.js.map",
+    "index.html": "/react-firebase/index.html",
+    "precache-manifest.14ee74926d0b174286b7bb343619b740.js": "/react-firebase/precache-manifest.14ee74926d0b174286b7bb343619b740.js",
+    "service-worker.js": "/react-firebase/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/react-firebase/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/react-firebase/static/media/logo.5d5d9eef.svg"
   }
 }
