@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/boss-bitch/static/css/main.2cce8147.chunk.css",
-    "main.js": "/boss-bitch/static/js/main.48bdb80c.chunk.js",
-    "main.js.map": "/boss-bitch/static/js/main.48bdb80c.chunk.js.map",
-    "runtime~main.js": "/boss-bitch/static/js/runtime~main.ab107fda.js",
-    "runtime~main.js.map": "/boss-bitch/static/js/runtime~main.ab107fda.js.map",
-    "static/js/2.01d26001.chunk.js": "/boss-bitch/static/js/2.01d26001.chunk.js",
-    "static/js/2.01d26001.chunk.js.map": "/boss-bitch/static/js/2.01d26001.chunk.js.map",
-    "index.html": "/boss-bitch/index.html",
-    "precache-manifest.0602527d20ff4abfcfe94328a6aeabe5.js": "/boss-bitch/precache-manifest.0602527d20ff4abfcfe94328a6aeabe5.js",
-    "service-worker.js": "/boss-bitch/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/boss-bitch/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/boss-bitch/static/media/logo.5d5d9eef.svg"
+    "main.css": "/habilit/react-firebase/static/css/main.2cce8147.chunk.css",
+    "main.js": "/habilit/react-firebase/static/js/main.5b58123e.chunk.js",
+    "main.js.map": "/habilit/react-firebase/static/js/main.5b58123e.chunk.js.map",
+    "runtime~main.js": "/habilit/react-firebase/static/js/runtime~main.ca2ba742.js",
+    "runtime~main.js.map": "/habilit/react-firebase/static/js/runtime~main.ca2ba742.js.map",
+    "static/js/2.762e967b.chunk.js": "/habilit/react-firebase/static/js/2.762e967b.chunk.js",
+    "static/js/2.762e967b.chunk.js.map": "/habilit/react-firebase/static/js/2.762e967b.chunk.js.map",
+    "index.html": "/habilit/react-firebase/index.html",
+    "precache-manifest.45826f4eda129ba0ac0cabcd6c13a430.js": "/habilit/react-firebase/precache-manifest.45826f4eda129ba0ac0cabcd6c13a430.js",
+    "service-worker.js": "/habilit/react-firebase/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/habilit/react-firebase/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/habilit/react-firebase/static/media/logo.5d5d9eef.svg"
   }
 }
