@@ -25,8 +25,6 @@ const todos = (state = defaultData, action) => {
                 todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
             )
         case 'FETCH_TODOS':
-            console.log('state FETCH_TODOS');
-            console.log(state);
             return {
                 ...state,
                 isFetching: false,

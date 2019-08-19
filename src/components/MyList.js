@@ -7,6 +7,7 @@ import { simpleAction } from '../actions/simpleAction';
 import {fetchToDos, addToDo} from "../actions/todoAction";
 
 import './index.css';
+import {Link} from "react-router-dom";
 
 class MyList extends Component {
     state = {
@@ -54,6 +55,36 @@ class MyList extends Component {
         return rowIdx % 1 === 0 ? 'row-even' : 'row-odd';
     };
 
+    renderTableOld = () => {
+        const { todos } = this.props;
+        return (<BootstrapTable className='table' data={ todos } trClassName={this.rowClassNameFormat} >
+            <TableHeaderColumn dataField='id' className='column key-column' isKey>ID</TableHeaderColumn>
+            <TableHeaderColumn dataField='title' className='column title-column'>Title</TableHeaderColumn>
+        </BootstrapTable>);
+    };
+
+    renderTable = () => {
+        const { todos } = this.props;
+        if (_.size(todos) === 0) {
+            return null;
+        }
+
+        return (<div className="table">
+            <div className="header">
+                <div className="id-column">Id</div>
+                <div className="title-column">Title</div>
+            </div>
+            {
+                todos.map(function (item, i) {
+                    return (<div className="content-row">
+                        <div>{item.id}</div>
+                        <div>{item.title}</div>
+                    </div>)
+                })
+            }
+        </div>);
+    };
+
     renderToDo() {
         const { todos, isFetching } = this.props;
         return (
@@ -63,10 +94,7 @@ class MyList extends Component {
                     <div className="loading">
                         <Loader type="TailSpin" color="#00BFFF" height="30" width="30"/>
                     </div>:
-                    <BootstrapTable className='table' data={ todos } trClassName={this.rowClassNameFormat} >
-                        <TableHeaderColumn dataField='id' className='column key-column' isKey>ID</TableHeaderColumn>
-                        <TableHeaderColumn dataField='title' className='column title-column'>Title</TableHeaderColumn>
-                    </BootstrapTable>
+                    this.renderTable()
                 }
             </div>
         );
@@ -84,11 +112,15 @@ class MyList extends Component {
 
 }
 
+const displayTitleLink = (title, Id) => {
+    return (<Link to={"/view/" + Id}>{title}</Link>)
+};
+
 const mappedData = (data) => {
     return _.map(data, (value, key) => {
             return {
                 id: key,
-                title: value.title
+                title: displayTitleLink(value.title, key),
             }
     })
 };

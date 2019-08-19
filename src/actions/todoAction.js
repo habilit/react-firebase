@@ -16,7 +16,6 @@ export const fetchToDos = () => async dispatch => {
         }
     });
     todosRef.on("value", snapshot => {
-
         dispatch({
             type: FETCH_TODOS,
             payload: snapshot.val()
